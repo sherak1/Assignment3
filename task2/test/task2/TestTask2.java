@@ -45,8 +45,9 @@ public class TestTask2 {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
+    public void testEmptyTree() {
+        MyTree tree = new MyTree();
+        assertTrue(tree.isEmpty());
+    }
 
 }
