@@ -75,7 +75,14 @@ public class TestTask2 {
 	        assertFalse(tree.contains2(20));
 	    }
 
-	
+	  @Test
+	    public void testIsSorted() {
+	        MyTree tree = new MyTree();
+	        tree.addValue(10);
+	        tree.addValue(5);
+	        tree.addValue(15);
+	        assertTrue(tree.isSorted());
+	    }
 	
 	
 	
