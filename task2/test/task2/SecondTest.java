@@ -31,12 +31,13 @@ public class SecondTest {
         MyStack stack = new MyStack();
         assertTrue(stack.isEmpty());
     }
+	//push and pop
 	@Test
     public void testPushAndPop() {
         MyStack stack = new MyStack();
-        stack.push(42);
+        stack.push(35);
         assertFalse(stack.isEmpty());
-        assertEquals(42, stack.pop());
+        assertEquals(35, stack.pop());
         assertTrue(stack.isEmpty());
     }
 
