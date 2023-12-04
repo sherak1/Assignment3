@@ -66,6 +66,15 @@ public class TestTask2 {
 	        tree.removeValue(5);
 	        assertFalse(tree.contains(5));
 	    }
+	 
+	 @Test
+	    public void testTreeContainsValue() {
+	        MyTree tree = new MyTree();
+	        tree.addValue(10);
+	        assertTrue(tree.contains(10));
+	        assertFalse(tree.contains(20));
+	    }
+
 	
 	
 	
