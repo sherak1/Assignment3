@@ -27,8 +27,9 @@ public class SecondTest {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
+    public void testEmptyStack() {
+        MyStack stack = new MyStack();
+        assertTrue(stack.isEmpty());
+    }
 
 }
