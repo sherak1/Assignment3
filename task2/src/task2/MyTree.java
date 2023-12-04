@@ -111,4 +111,39 @@ public class MyTree {
 		return node.data;
 	}
 
+	public boolean contains2(int value) {
+        return contains2Recursive(root, value);
+    }
+
+    private boolean contains2Recursive(Node current, int value) {
+        // Base case: If the current node is null, the value is not found
+        if (current == null) {
+            return false;
+        }
+
+        // If the value is equal to the current node's data, it's found
+        if (value == current.data) {
+            return true;
+        }
+
+        if (value < current.data) {
+            return containsRecursive(current.left, value);
+        }
+
+        else {
+            return containsRecursive(current.right, value);
+        }
+    }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

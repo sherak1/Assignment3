@@ -71,8 +71,8 @@ public class TestTask2 {
 	    public void testTreeContainsValue() {
 	        MyTree tree = new MyTree();
 	        tree.addValue(10);
-	        assertTrue(tree.contains(10));
-	        assertFalse(tree.contains(20));
+	        assertTrue(tree.contains2(10));
+	        assertFalse(tree.contains2(20));
 	    }
 
 	
