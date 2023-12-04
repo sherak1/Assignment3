@@ -45,17 +45,29 @@ public class TestTask2 {
 	}
 
 	@Test
-    public void testEmptyTree() {
-        MyTree tree = new MyTree();
-        assertTrue(tree.isEmpty());
-    }
+	public void testEmptyTree() {
+		MyTree tree = new MyTree();
+		assertTrue(tree.isEmpty());
+	}
+
+	@Test
+	public void testAddValue() {
+		MyTree tree = new MyTree();
+		tree.addValue(5);
+		assertFalse(tree.isEmpty());
+		assertTrue(tree.contains(5));
+	}
+
 	 @Test
-	    public void testAddValue() {
+	    public void testRemoveValue() {
 	        MyTree tree = new MyTree();
 	        tree.addValue(5);
-	        assertFalse(tree.isEmpty());
 	        assertTrue(tree.contains(5));
+	        tree.removeValue(5);
+	        assertFalse(tree.contains(5));
 	    }
+	
+	
 	
 	
 }

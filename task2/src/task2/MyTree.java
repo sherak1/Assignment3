@@ -13,57 +13,54 @@ public class MyTree {
 		return root == null;
 	}
 
-	 public void addValue(int value) {
-	        root = addRecursive(root, value);
-	    }
-	 
-	/* public boolean contains(int value) {
-	        return containsRecursive(root, value);
-	    }*/
+	public void addValue(int value) {
+		root = addRecursive(root, value);
+	}
 
-	    private Node addRecursive(Node current, int value) {
-	        if (current == null) {
-	            return new Node(value);
-	        }
+	/*
+	 * public boolean contains(int value) { return containsRecursive(root, value); }
+	 */
 
-	        if (value < current.data) {
-	            current.left = addRecursive(current.left, value);
-	        } else if (value > current.data) {
-	            current.right = addRecursive(current.right, value);
-	        }
+	private Node addRecursive(Node current, int value) {
+		if (current == null) {
+			return new Node(value);
+		}
 
-	        return current;
-	    }
-	    public boolean contains(int value) {
-	        return containsRecursive(root, value);
-	    }
+		if (value < current.data) {
+			current.left = addRecursive(current.left, value);
+		} else if (value > current.data) {
+			current.right = addRecursive(current.right, value);
+		}
 
-	    private boolean containsRecursive(Node current, int value) {
-	        if (current == null) {
-	            return false;
-	        }
+		return current;
+	}
 
-	        if (value == current.data) {
-	            return true;
-	        }
+	public boolean contains(int value) {
+		return containsRecursive(root, value);
+	}
 
-	        return value < current.data
-	                ? containsRecursive(current.left, value)
-	                : containsRecursive(current.right, value);
-	    }
+	private boolean containsRecursive(Node current, int value) {
+		if (current == null) {
+			return false;
+		}
 
-	    private static class Node {
-	        int data;
-	        Node left;
-	        Node right;
+		if (value == current.data) {
+			return true;
+		}
 
-	        public Node(int data) {
-	            this.data = data;
-	            this.left = null;
-	            this.right = null;
-	        }
-	    }
+		return value < current.data ? containsRecursive(current.left, value) : containsRecursive(current.right, value);
+	}
 
-		 
+	private static class Node {
+		int data;
+		Node left;
+		Node right;
+
+		public Node(int data) {
+			this.data = data;
+			this.left = null;
+			this.right = null;
+		}
+	}
 
 }
