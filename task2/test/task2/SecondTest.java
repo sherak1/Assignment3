@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class SecondTest {
-
+	MyStack stack;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -20,6 +20,7 @@ public class SecondTest {
 
 	@Before
 	public void setUp() throws Exception {
+		 stack = new MyStack();
 	}
 
 	@After
@@ -27,18 +28,18 @@ public class SecondTest {
 	}
 
 	@Test
-    public void testEmptyStack() {
-        MyStack stack = new MyStack();
-        assertTrue(stack.isEmpty());
-    }
-	//push and pop
+	public void testEmptyStack() {
+	//	MyStack stack = new MyStack();
+		assertTrue(stack.isEmpty());
+	}
+
+	// push and pop
 	@Test
-    public void testPushAndPop() {
-        MyStack stack = new MyStack();
-        stack.push(35);
-        assertFalse(stack.isEmpty());
-        assertEquals(35, stack.pop());
-        assertTrue(stack.isEmpty());
-    }
+	public void testPushAndPop() {
+ 		stack.push(35);
+		assertFalse(stack.isEmpty());
+		assertEquals(35, stack.pop());
+		assertTrue(stack.isEmpty());
+	}
 
 }
