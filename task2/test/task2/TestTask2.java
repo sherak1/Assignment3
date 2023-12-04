@@ -15,8 +15,8 @@ import org.junit.Test;
  * 
  */
 public class TestTask2 {
-    MyTree tree;
-
+	MyTree tree;
+    
 	/**
 	 * @throws java.lang.Exception
 	 */
@@ -49,7 +49,7 @@ public class TestTask2 {
 
 	@Test
 	public void testEmptyTree() {
-		//MyTree tree = new MyTree();
+		// MyTree tree = new MyTree();
 		assertTrue(tree.isEmpty());
 	}
 
@@ -60,29 +60,29 @@ public class TestTask2 {
 		assertTrue(tree.contains(5));
 	}
 
-	 @Test
-	    public void testRemoveValue() {
-	        tree.addValue(5);
-	        assertTrue(tree.contains(5));
-	        tree.removeValue(5);
-	        assertFalse(tree.contains(5));
-	    }
-	 
-	 @Test
-	    public void testTreeContainsValue() {
-	        tree.addValue(10);
-	        assertTrue(tree.contains2(10));
-	        assertFalse(tree.contains2(20));
-	    }
+	@Test
+	public void testRemoveValue() {
+		tree.addValue(5);
+		assertTrue(tree.contains(5));
+		tree.removeValue(5);
+		assertFalse(tree.contains(5));
+	}
 
-	  @Test
-	    public void testIsSorted() {
-	        tree.addValue(10);
-	        tree.addValue(5);
-	        tree.addValue(15);
-	        assertTrue(tree.isSorted());
-	    }
+	@Test
+	public void testTreeContainsValue() {
+		tree.addValue(10);
+		assertTrue(tree.contains2(10));
+		assertFalse(tree.contains2(20));
+	}
+
+	@Test
+	public void testIsSorted() {
+		tree.addValue(10);
+		tree.addValue(5);
+		tree.addValue(15);
+		assertTrue(tree.isSorted());
+	}
 	
-	
-	
+	 
+
 }

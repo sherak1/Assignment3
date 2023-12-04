@@ -1,6 +1,5 @@
 package task2;
 
- 
 public class MyTree {
 
 	private Node root;
@@ -61,9 +60,10 @@ public class MyTree {
 		}
 		// If the value we're looking for is less than the current node's data,
 		return value == current.data || (value < current.data && containsRecursive(current.left, value))
-		        || (value > current.data && containsRecursive(current.right, value));
+				|| (value > current.data && containsRecursive(current.right, value));
 
-		// or [return value < current.data ? containsRecursive(current.left, value) : containsRecursive(current.right, value);
+		// or [return value < current.data ? containsRecursive(current.left, value) :
+		// containsRecursive(current.right, value);
 	}
 
 // remove implementation
